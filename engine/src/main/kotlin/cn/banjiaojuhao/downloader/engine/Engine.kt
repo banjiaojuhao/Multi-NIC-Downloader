@@ -16,7 +16,7 @@ import java.util.concurrent.atomic.AtomicBoolean
 data class Netcard(val name: String, val address: String)
 
 /**
- * download part
+ * download module
  * load download progress if there is
  */
 class Engine(private val url: URL,
@@ -65,7 +65,7 @@ class Engine(private val url: URL,
 
     private val downloadWorker = LinkedHashSet<Worker>()
     private val toStop = AtomicBoolean(false)
-    private lateinit var task: Task
+    private var task: Task
     private val resultChannel = Channel<WorkerMsg>(20)
     private lateinit var resultReceiver: Job
 

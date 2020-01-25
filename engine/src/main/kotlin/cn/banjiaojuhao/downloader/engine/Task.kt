@@ -16,7 +16,7 @@ import kotlin.math.min
 
 
 /**
- * functions about task and files: Configure and downloaded
+ * functions about one download task and downloaded file
  */
 
 data class TaskRequest(val id: Int, val work: WorkPiece)
